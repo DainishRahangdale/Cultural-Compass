@@ -1,38 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Create new place</h1>
+<% layout('layouts/boilarplate.ejs') -%>
+    <h1>Edit place</h1>
     <form method="post" action="/Listing/<%=list._id%>?_method=PUT">
-        <label for="title">Enter Title</label>
-        <input id="title" type="text" value="<%=list.title%>" name="title">
-        <br/>
-        <br/>
-        <label for="description">Enter Description</label>
-        <textarea id="description" type="text" value="<%=list.description%>" name="description"></textarea>
-        <br/>
-        <br/>
-        <label for="location">Enter location</label>
-        <input id="location" type="text" value="<%=list.location%>" name="location">
-        <br/>
-        <br/>
-        <label for="price">Enter Price</label>
-        <input id="price" type="text" value="<%=list.price%>" name="price">
-        <br/>
-        <br/>
-        <label for="country">Enter country</label>
-        <input id="country" type="text" value="<%=list.country%>" name="country">
-        <br/>
-        <br/>
+        <div class="mb-3">
+            <label for="title" class="form-label">Enter Title</label>
+            <input id="title" type="text" name="title" value="<%=list.title%>" class="form-control">
+        </div>
+       
+        <div class="mb-3">
+            <label for="description" class="form-label">Enter Description</label>
+            <textarea id="description" type="text"  name="description" class="form-control"><%=list.description%></textarea>
+        </div>
+       
+       <div class="mb-3 col-md-4"> 
+        <label for="location" class="form-label">Enter location</label>
+        <input id="location" value="<%=list.location%>" type="text" name="location" class="form-control">
+    </div>
+       <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Enter Price</label>
+        <input id="price" type="text" value="<%=list.price%>" name="price" class="form-control">
+       </div>
+       <div class="mb-3"> 
+         <label for="country" class="form-label">Enter country</label>
+        <input id="country" type="text" value="<%=list.country%>" name="country" class="form-control">
+       </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Enter Image URL</label>
+        <input id="image" type="text" name="image[url]" class="form-control">
+        </div>
         <!--   for images reserve
         <label for="">Enter Title</label>
         <input id="title" type="text" name="title">
         <br/> -->  
-        <button type="submit">Edit</button>
+        <button type="submit" class="btn btn-dark add-btn">Edit</button>
+        <br/>
+        <br>
     </form>
-</body>
-</html>

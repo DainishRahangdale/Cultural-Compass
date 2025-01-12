@@ -9,7 +9,8 @@ const methodOverride = require('method-override')
 app.set('view engine','ejs');
 
 app.set('views', path.join(__dirname,'views'));
-app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(express.urlencoded({extended:true}))  // for parsing
 app.use(methodOverride('_method'));
