@@ -1,0 +1,41 @@
+<% layout('layouts/boilarplate') -%>
+    <h1>Create new place</h1>
+    <form method="post" action="/Listing/new">
+        <div>
+            <label for="title" class="form-label">Enter Title</label>
+            <input id="title" type="text" name="title" class="form-control">
+        </div>
+       
+        <div>
+            <label for="description" class="form-label">Enter Description</label>
+            <textarea id="description" type="text" name="description" class="form-control"></textarea>
+        </div>
+       
+       <div> 
+        <label for="location" class="form-label">Enter location</label>
+        <input id="location" type="text" name="location" class="form-control">
+    </div>
+       <div>
+        <label for="price" class="form-label">Enter Price</label>
+        <input id="price" type="text" name="price" class="form-control">
+       </div>
+       
+       
+       
+       <div> 
+         <label for="country" class="form-label">Enter country</label>
+        <input id="country" type="text" name="country" class="form-control">
+
+       </div>
+      
+        <div>
+            <label for="image" class="form-label">Enter Image URL</label>
+        <input id="image" type="text" name="image[url]" class="form-control">
+        </div>
+        <!--   for images reserve
+        <label for="">Enter Title</label>
+        <input id="title" type="text" name="title">
+        <br/> -->  
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+

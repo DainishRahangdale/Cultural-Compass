@@ -1,0 +1,51 @@
+for backend
+
+npm init -y
+
+npm install express ejs mongoose
+
+
+number.toLocalString()  // it convert number to local indian systm 
+
+
+in mongoose if we want to make new collection first we can make new shcema and 
+just make model first and use this schema using new whenever you want to insertt in db
+
+using save we can do this
+so   1. make model and schema
+    2.  to save any new document use new and make instance of shcema 
+    3. using save insert in databases
+
+
+    schema.findByIdAndUpdate    using this method we can do update using indian
+
+
+
+    if you use method override use default method is post
+
+    using Listing.findByIdAndDelete method 
+
+
+    for ejs styling ejs mate package we install
+
+
+    how use this go ejs-mate dosc
+
+
+    so if i want modularity in html so using template tag 
+    and js for dom manupulation so we can do this 
+    usign class name or id we can get element ans just appendChild so we can add this type of modularity in 
+    
+
+    for common css and js ue public folder 
+    where we can store this type of common databases
+
+    for styling we will use bootstrap 
+
+    for icons we will use font owesome
+
+
+    sticky-top to stuck om top
+
+    text decoration
+    
