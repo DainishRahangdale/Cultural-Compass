@@ -2,28 +2,28 @@
 <div class="row">
      <div class="col-8 offset-2">
         <h1>Create new place</h1>
-        <form method="post" action="/Listing/new">
+        <form method="post" action="/Listing/new" novalidate>
             <div class="mb-3">
                 <label for="title" class="form-label">Enter Title</label>
-                <input id="title" type="text" name="title" class="form-control">
+                <input id="title" type="text" name="title" class="form-control" required>
             </div>
            
             <div class="mb-3">
                 <label for="description" class="form-label">Enter Description</label>
-                <textarea id="description" type="text" name="description" class="form-control"></textarea>
+                <textarea id="description" type="text" name="description" class="form-control" required></textarea>
             </div>
            
            <div class="mb-3 col-md-4"> 
             <label for="location" class="form-label">Enter location</label>
-            <input id="location" type="text" name="location" class="form-control">
+            <input required id="location" type="text" name="location" class="form-control">
         </div>
            <div class="mb-3 col-md-4">
             <label for="price" class="form-label">Enter Price</label>
-            <input id="price" type="text" name="price" class="form-control">
+            <input required id="price" type="text" name="price" class="form-control">
            </div>
            <div class="mb-3"> 
              <label for="country" class="form-label">Enter country</label>
-            <input id="country" type="text" name="country" class="form-control">
+            <input required id="country" type="text" name="country" class="form-control">
            </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Enter Image URL</label>

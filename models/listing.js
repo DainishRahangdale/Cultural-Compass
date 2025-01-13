@@ -1,7 +1,15 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const default_image = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fbeautiful-places&psig=AOvVaw3tU1OEQ4yQAy9wMukPJQ1-&ust=1736660635501000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiQ-pX77IoDFQAAAAAdAAAAABAE';
+
+const default_image = 'https://photos.onedrive.com/share/E6B7E22EBE93C63E!s6d709e0ac5a4470aa4d730a0ca384f08?cid=E6B7E22EBE93C63E&resId=E6B7E22EBE93C63E!s6d709e0ac5a4470aa4d730a0ca384f08&ithint=photo&e=comq0q&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9lNmI3ZTIyZWJlOTNjNjNlL0VRcWVjRzJreFFwSHBOY3dvTW80VHdnQjZndDVkN2NtQ3VxX2J5WVZPQzhTaHc_ZT1jb21xMHE';
+
+const ImageSchema = new mongoose.Schema({
+    filename: { type: String, default: 'default' },
+    url: { type: String, default: default_image },
+});
+
+
 const listingSchema = new Schema({
     title :{
         type: String,
@@ -9,13 +17,16 @@ const listingSchema = new Schema({
     },
     description: String,
     image: {
-        type: Object,
-        default: {
-            filename:'default',
-            url:default_image,
+        type: ImageSchema,
+        default: () => ({ filename: 'default', url: default_image }),
+        set: (v) => {
+            if (v === "") {
+                return { filename: 'default', url: default_image };
+            }
+            return { filename: 'fileNew', url: v };
         },
-        set: (v) => v === ""? default_image:v,
-    },
+    }
+    ,
     price :Number,
     location : String,
     country : String,
