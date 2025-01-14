@@ -14,7 +14,7 @@ async function main() {
 }
 
 main().then(()=>{
-    console.log('connect to Db');
+    console.log('connect to Db1');
     
 }).catch(err =>{
     console.log(err);
