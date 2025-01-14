@@ -2,7 +2,7 @@
 <div class="row">
      <div class="col-8 offset-2">
         <h1>Create new place</h1>
-        <form method="post" action="/Listing/new" novalidate>
+        <form method="post" action="/Listing/new" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label for="title" class="form-label">Enter Title</label>
                 <input id="title" type="text" name="title" class="form-control" required>
@@ -27,7 +27,7 @@
            </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Enter Image URL</label>
-            <input id="image" type="text" name="image[url]" class="form-control">
+            <input id="image" type="text" name="url" class="form-control">
             </div>
             <!--   for images reserve
             <label for="">Enter Title</label>

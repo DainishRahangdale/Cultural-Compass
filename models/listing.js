@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const default_image = 'https://photos.onedrive.com/share/E6B7E22EBE93C63E!s6d709e0ac5a4470aa4d730a0ca384f08?cid=E6B7E22EBE93C63E&resId=E6B7E22EBE93C63E!s6d709e0ac5a4470aa4d730a0ca384f08&ithint=photo&e=comq0q&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9lNmI3ZTIyZWJlOTNjNjNlL0VRcWVjRzJreFFwSHBOY3dvTW80VHdnQjZndDVkN2NtQ3VxX2J5WVZPQzhTaHc_ZT1jb21xMHE';
+const default_image = "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60";
 
 const ImageSchema = new mongoose.Schema({
     filename: { type: String, default: 'default' },

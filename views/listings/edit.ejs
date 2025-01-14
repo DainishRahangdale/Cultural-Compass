@@ -1,27 +1,27 @@
 <% layout('layouts/boilarplate.ejs') -%>
     <h1>Edit place</h1>
-    <form method="post" action="/Listing/<%=list._id%>?_method=PUT">
+    <form class="needs-validation" novalidate method="post" action="/Listing/<%=list._id%>?_method=PUT">
         <div class="mb-3">
             <label for="title" class="form-label">Enter Title</label>
-            <input id="title" type="text" name="title" value="<%=list.title%>" class="form-control">
+            <input id="title" type="text" name="title" value="<%=list.title%>" class="form-control" required>
         </div>
        
         <div class="mb-3">
             <label for="description" class="form-label">Enter Description</label>
-            <textarea id="description" type="text"  name="description" class="form-control"><%=list.description%></textarea>
+            <textarea id="description" type="text"  name="description" required class="form-control"><%=list.description%></textarea>
         </div>
        
        <div class="mb-3 col-md-4"> 
         <label for="location" class="form-label">Enter location</label>
-        <input id="location" value="<%=list.location%>" type="text" name="location" class="form-control">
+        <input id="location" value="<%=list.location%>" type="text" name="location" class="form-control" required>
     </div>
        <div class="mb-3 col-md-4">
         <label for="price" class="form-label">Enter Price</label>
-        <input id="price" type="text" value="<%=list.price%>" name="price" class="form-control">
+        <input id="price" type="text" value="<%=list.price%>" name="price" class="form-control" required>
        </div>
        <div class="mb-3"> 
          <label for="country" class="form-label">Enter country</label>
-        <input id="country" type="text" value="<%=list.country%>" name="country" class="form-control">
+        <input id="country" type="text" value="<%=list.country%>" name="country" class="form-control" required>
        </div>
         <div class="mb-3">
             <label for="image" class="form-label">Enter Image URL</label>

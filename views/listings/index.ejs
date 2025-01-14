@@ -9,13 +9,14 @@
             <a href="/Listing/<%=listing.id%>" class="listing-link">
             <div class="col">
                 <div class="card h-100">
-                    <img src="<%= listing.image.url %>" class="card-img-top" alt="place image" style="height: 20rem;">
+                    <img src="<%=listing.image.url%>" class="card-img-top" alt="place image" style="height: 20rem;">
                     <div class="card-img-overlay"></div>
 
                     <div class="card-body">
                         <b><h4 class="card-title"><%= listing.title %></h4></b>
                         <p class="card-price">&#8377;<%= listing.price.toLocaleString("hi-IN") %></p>
                         <p class="card-text"><%= listing.description %></p>
+                         
                     </div>
                 </div>
             </div>

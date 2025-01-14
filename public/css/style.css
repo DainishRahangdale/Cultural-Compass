@@ -2,14 +2,34 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image:linear-gradient(
+        rgba(0, 0, 0, 0.5), /* Gradient overlay for dark effect */
+        rgba(0, 0, 0, 0.5)
+      ), url('/images/bg2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+
+    
 }
 .container{
-    flex:1rem
+    flex:1rem;
+   
+    
+
+   
 }
 
 .navbar{
     height: 5rem;
-    background-color: white;
+    background-color:rgb(227, 211, 172);
+}
+
+.logo-image{
+    height: 4.5rem;
 }
 
 .fa-vault{
