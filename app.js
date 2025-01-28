@@ -10,6 +10,8 @@ const Review = require('./models/reviews.js');
 const wrapAsync = require('./utils/wrapAsync');
 const ExpressError = require('./utils/expressErrors');
 const reviews = require('./models/reviews.js');
+const flash = require('connect-flash'); 
+const session = require('express-session');
 
 
 
@@ -23,6 +25,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}))  // for parsing
 app.use(methodOverride('_method'));
 app.engine('ejs', ejs_mate);
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie : {
+        expires: Date.now() + 1000*60*60*24,
+        maxAge: 1000*60*60*24,
+        httpOnly: true
+    }
+  }))
 
 const port = 3001;
 //  to connect database

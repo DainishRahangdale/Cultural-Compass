@@ -51,4 +51,7 @@ so   1. make model and schema
 
 
 
+    connect - flash it is middleware
+    for message save and display
+
     
